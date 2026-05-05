@@ -3,6 +3,12 @@
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
 ![Status](https://img.shields.io/badge/status-active-success)
 ![License](https://img.shields.io/badge/license-MIT-green)
+![Deploy](https://img.shields.io/badge/API-online-brightgreen)
+
+🌐 **API Online:**  
+👉 https://calculation-toolkit-api.onrender.com
+
+---
 
 Aplicação desenvolvida em Python que oferece utilitários de cálculo via **CLI interativo** e também através de uma **API REST com Flask**.
 
