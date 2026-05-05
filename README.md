@@ -1,18 +1,30 @@
 # 🧮 Calculation Toolkit
 
-Aplicação CLI (Command Line Interface) desenvolvida em Python para realizar cálculos básicos de forma interativa.
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Status](https://img.shields.io/badge/status-active-success)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-Este projeto foi criado com o objetivo de praticar conceitos fundamentais de programação, organização de código e boas práticas utilizadas no mercado.
+Aplicação desenvolvida em Python que oferece utilitários de cálculo via **CLI interativo** e também através de uma **API REST com Flask**.
+
+Este projeto demonstra boas práticas de desenvolvimento, organização de código e evolução de um sistema simples para uma aplicação mais robusta.
 
 ---
 
 ## 🚀 Funcionalidades
 
-* 🌡️ Conversão de temperatura (Celsius → Fahrenheit)
-* 🔢 Cálculo de fatorial
-* 📥 Entrada de dados com validação
-* 🧠 Tratamento de erros (entrada inválida)
-* 🧩 Código modularizado (separação por responsabilidades)
+### 💻 CLI (Terminal)
+
+* Conversão de temperatura (Celsius → Fahrenheit)
+* Cálculo de fatorial
+* Validação de entrada do usuário
+* Mensagens coloridas no terminal
+
+### 🌐 API REST
+
+* Endpoint para conversão de temperatura
+* Endpoint para cálculo de fatorial
+* Retorno em formato JSON
+* Tratamento de erros
 
 ---
 
@@ -22,41 +34,19 @@ Este projeto foi criado com o objetivo de praticar conceitos fundamentais de pro
 calculation-toolkit/
 │
 ├── main.py
+├── api.py
 ├── services/
-│   ├── temperatura.py
-│   └── fatorial.py
-│
 ├── utils/
-│   └── input_helper.py
-│
-├── README.md
-└── .gitignore
+├── tests/
+├── assets/
+└── README.md
 ```
-
----
-
-## 🛠️ Tecnologias utilizadas
-
-* Python 3
-* Biblioteca padrão `math`
 
 ---
 
 ## ▶️ Como executar
 
-### 1. Clone o repositório
-
-```bash
-git clone https://github.com/seu-usuario/calculation-toolkit.git
-```
-
-### 2. Acesse a pasta do projeto
-
-```bash
-cd calculation-toolkit
-```
-
-### 3. Execute a aplicação
+### 🔹 CLI
 
 ```bash
 python main.py
@@ -64,18 +54,73 @@ python main.py
 
 ---
 
-## 💻 Exemplo de uso
+### 🔹 API
+
+```bash
+python api.py
+```
+
+A API estará disponível em:
 
 ```
-=== Calculation Toolkit ===
-1 - Converter Celsius para Fahrenheit
-2 - Calcular Fatorial
-0 - Sair
-
-Escolha uma opção: 1
-Digite a temperatura em Celsius: 25
-Resultado: 77.00 °F
+http://127.0.0.1:5000
 ```
+
+---
+
+## 🌐 Endpoints
+
+### 📌 Converter temperatura
+
+```
+GET /temperatura?celsius=25
+```
+
+Resposta:
+
+```json
+{
+  "celsius": 25,
+  "fahrenheit": 77.0
+}
+```
+
+---
+
+### 📌 Calcular fatorial
+
+```
+GET /fatorial?numero=5
+```
+
+Resposta:
+
+```json
+{
+  "numero": 5,
+  "fatorial": 120
+}
+```
+
+---
+
+## 📸 Exemplos
+
+### 💻 CLI
+
+![CLI](assets/calculation-toolkit1.png)
+
+---
+
+### 🌡️ Conversão de temperatura
+
+![Temperatura](assets/calculation-toolkit2.png)
+
+---
+
+### 🔢 Cálculo de fatorial
+
+![Fatorial](assets/calculation-toolkit3.png)
 
 ---
 
@@ -83,19 +128,20 @@ Resultado: 77.00 °F
 
 * Entrada de dados com `input()`
 * Conversão de tipos (`int`, `float`)
-* Estrutura condicional (`if/elif`)
 * Tratamento de exceções (`try/except`)
 * Modularização de código
-* Boas práticas (PEP 8)
+* Uso de bibliotecas padrão (`math`)
+* Criação de API com Flask
+* Estruturação de projeto (clean code)
 
 ---
 
 ## 📈 Melhorias futuras
 
-* Interface gráfica (Tkinter)
-* Versão web com Flask
-* Testes automatizados
-* Empacotamento como executável
+* Deploy da API na nuvem
+* Interface gráfica (GUI)
+* Testes automatizados mais avançados
+* Documentação com Swagger
 
 ---
 

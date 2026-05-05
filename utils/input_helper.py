@@ -1,9 +1,12 @@
+from utils.output_helper import erro
+
+
 def ler_float(mensagem: str) -> float:
     while True:
         try:
             return float(input(mensagem))
         except ValueError:
-            print("Entrada inválida. Digite um número válido.")
+            erro("Entrada inválida. Digite um número válido.")
 
 
 def ler_int(mensagem: str) -> int:
@@ -11,4 +14,4 @@ def ler_int(mensagem: str) -> int:
         try:
             return int(input(mensagem))
         except ValueError:
-            print("Entrada inválida. Digite um número inteiro.")
+            erro("Entrada inválida. Digite um número inteiro.")
